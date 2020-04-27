@@ -14,12 +14,11 @@ ${APP}                  Microsoft.XAMLControlsGallery_8wekyb3d8bbwe!App
 *** Test Cases ***
 Test Launch application
     wait until element is visible     name=Back
-    get element attribute  name=Back  AutomationId=NavigationViewBackButton
     Click element    name=Settings
     wait until element is visible    name=Sound
     SLEEP  5
-    Click element    name=Back
-
+    Click element    accessibility_id=NavigationViewBackButton   #name=Back
+    Sleep  3
 *** Keywords ***
 
 Start AUT
